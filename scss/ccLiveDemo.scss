@@ -1,0 +1,150 @@
+@import "pxToRem";
+@mixin middle{
+  margin: 0 auto;
+}
+@mixin fullWidth{
+  width: 100%;
+  height: auto;
+}
+html{
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  background: #F0F0F0;
+}
+.cc-container{
+  width: 100%;
+  height: 100%;
+  .cc-header{
+    @include fullWidth();
+    margin-bottom: rem(20px);
+    background: #2D323C;
+    .cc-header-container{
+        @include middle();
+        height: rem(100px);
+      .title{
+        line-height: rem(100px);
+        color:#fff;
+        font-size: rem(38px);
+        padding: 0 rem(30px);
+      }
+    }
+  }
+  .cc-banner{
+    @include fullWidth();
+    .cc-banner-container{
+      @include middle();
+      width: rem(1280px);
+      height: rem(760px);
+      padding:rem(30px);
+      background: #3dadff;
+      .cc-video-container{
+        float: left;
+        width: rem(860px);
+        height: rem(540px);
+        .cc-video-box{
+          width: 100%;
+          height: rem(440px);
+          background: #316661;
+        }
+        .cc-panel{
+          width: auto;
+          height: rem(280px);
+          padding: rem(20px);
+          background: #27c3bb;
+          .cc-doc-box{
+            float: left;
+            height: 100%;
+            width: rem(540px);
+            background: #2D323C;
+          }
+          .cc-video-control{
+            float: left;
+            height: 100%;
+            width: rem(270px);
+            margin-left: rem(10px);
+            background: #2D323C;
+          }
+        }
+      }
+      .cc-chat-container{
+        float: left;
+        width: rem(380px);
+        height: rem(740px);
+        padding: rem(10px);
+        margin-left: rem(15px);
+        background: #362a9f;
+        .cc-msg-list{
+          width: 100%;
+          height: 560px;
+          background: #F4F7FF;
+          .cc-msg-item{
+            min-height: rem(45px);
+            height: auto;
+            width: rem(340px);
+            padding: rem(20px);
+
+            line-height: rem(25px);
+            font-size: rem(18px);
+            .cc-chat-user{
+              height: rem(20px);
+              width: 100%;
+              background: #abf0d9;
+              font-weight: 800;
+              font-size: rem(20px);
+            }
+            .cc-chat-word{
+              padding-left: rem(60px);
+              background: #abf0d9;
+            }
+            &.me{
+              .cc-chat-user{
+                text-align: right;
+                padding-bottom: rem(5px);
+              }
+            }
+          }
+        }
+        .cc-chat-panel{
+          background: #EFF3FE;
+          width: 100%;
+          height: 180px;
+          .cc-chat-bar{
+            width: 100%;
+            height: rem(50px);
+            .cc-chat-emotion{
+              float: left;
+              width: rem(38px);
+              height: rem(38px);
+              margin-left: rem(20px);
+              background: url("../img/smile.png") no-repeat center 50%;
+              background-size: cover;
+            }
+            .cc-chat-opponent{
+              width: 260px;
+              float: right;
+              margin-left: rem(20px);
+              height: rem(50px);
+              line-height: rem(40px);
+              font-size: rem(20px);
+              i,ul{
+                float: left;
+                font-style: normal;
+
+              }
+              .cc-chat-people,.cc-chat-users{
+                height: rem(38px);
+                width: 160px;
+                border:1px solid #ddd;
+                background: #fff;
+                margin: 0 rem(5px);
+                float: left;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
