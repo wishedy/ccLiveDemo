@@ -1,0 +1,119 @@
+html {
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  background: #F0F0F0; }
+
+.cc-container {
+  width: 100%;
+  height: 100%; }
+  .cc-container .cc-header {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.25rem;
+    background: #2D323C; }
+    .cc-container .cc-header .cc-header-container {
+      margin: 0 auto;
+      height: 6.25rem; }
+      .cc-container .cc-header .cc-header-container .title {
+        line-height: 6.25rem;
+        color: #fff;
+        font-size: 2.375rem;
+        padding: 0 1.875rem; }
+  .cc-container .cc-banner {
+    width: 100%;
+    height: auto; }
+    .cc-container .cc-banner .cc-banner-container {
+      margin: 0 auto;
+      width: 80rem;
+      height: 47.5rem;
+      padding: 1.875rem;
+      background: #3dadff; }
+      .cc-container .cc-banner .cc-banner-container .cc-video-container {
+        float: left;
+        width: 53.75rem;
+        height: 33.75rem; }
+        .cc-container .cc-banner .cc-banner-container .cc-video-container .cc-video-box {
+          width: 100%;
+          height: 27.5rem;
+          background: #316661; }
+        .cc-container .cc-banner .cc-banner-container .cc-video-container .cc-panel {
+          width: auto;
+          height: 17.5rem;
+          padding: 1.25rem;
+          background: #27c3bb; }
+          .cc-container .cc-banner .cc-banner-container .cc-video-container .cc-panel .cc-doc-box {
+            float: left;
+            height: 100%;
+            width: 33.75rem;
+            background: #2D323C; }
+          .cc-container .cc-banner .cc-banner-container .cc-video-container .cc-panel .cc-video-control {
+            float: left;
+            height: 100%;
+            width: 16.875rem;
+            margin-left: 0.625rem;
+            background: #2D323C; }
+      .cc-container .cc-banner .cc-banner-container .cc-chat-container {
+        float: left;
+        width: 23.75rem;
+        height: 46.25rem;
+        padding: 0.625rem;
+        margin-left: 0.9375rem;
+        background: #362a9f; }
+        .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-msg-list {
+          width: 100%;
+          height: 560px;
+          background: #F4F7FF; }
+          .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-msg-list .cc-msg-item {
+            min-height: 2.8125rem;
+            height: auto;
+            width: 21.25rem;
+            padding: 1.25rem;
+            line-height: 1.5625rem;
+            font-size: 1.125rem; }
+            .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-msg-list .cc-msg-item .cc-chat-user {
+              height: 1.25rem;
+              width: 100%;
+              background: #abf0d9;
+              font-weight: 800;
+              font-size: 1.25rem; }
+            .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-msg-list .cc-msg-item .cc-chat-word {
+              padding-left: 3.75rem;
+              background: #abf0d9; }
+            .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-msg-list .cc-msg-item.me .cc-chat-user {
+              text-align: right;
+              padding-bottom: 0.3125rem; }
+        .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel {
+          background: #EFF3FE;
+          width: 100%;
+          height: 180px; }
+          .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar {
+            width: 100%;
+            height: 3.125rem; }
+            .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar .cc-chat-emotion {
+              float: left;
+              width: 2.375rem;
+              height: 2.375rem;
+              margin-left: 1.25rem;
+              background: url("../img/smile.png") no-repeat center 50%;
+              background-size: cover; }
+            .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar .cc-chat-opponent {
+              width: 260px;
+              float: right;
+              margin-left: 1.25rem;
+              height: 3.125rem;
+              line-height: 2.5rem;
+              font-size: 1.25rem; }
+              .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar .cc-chat-opponent i, .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar .cc-chat-opponent ul {
+                float: left;
+                font-style: normal; }
+              .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar .cc-chat-opponent .cc-chat-people, .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar .cc-chat-opponent .cc-chat-users {
+                height: 2.375rem;
+                width: 160px;
+                border: 1px solid #ddd;
+                background: #fff;
+                margin: 0 0.3125rem;
+                float: left;
+                text-align: center; }
+
+/*# sourceMappingURL=ccLiveDemo.css.map */
