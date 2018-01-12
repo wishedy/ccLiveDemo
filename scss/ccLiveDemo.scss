@@ -49,19 +49,19 @@ html{
         }
         .cc-panel{
           width: auto;
-          height: rem(280px);
-          padding: rem(20px);
+          height: rem(310px);
+          padding-top: rem(10px);
           background: #27c3bb;
           .cc-doc-box{
             float: left;
             height: 100%;
-            width: rem(540px);
+            width: rem(500px);
             background: #2D323C;
           }
           .cc-video-control{
             float: left;
             height: 100%;
-            width: rem(270px);
+            width: rem(350px);
             margin-left: rem(10px);
             background: #2D323C;
           }
@@ -106,7 +106,7 @@ html{
           }
         }
         .cc-chat-panel{
-          background: #EFF3FE;
+          background: #ecf0fb;
           width: 100%;
           height: 180px;
           .cc-chat-bar{
@@ -117,6 +117,7 @@ html{
               width: rem(38px);
               height: rem(38px);
               margin-left: rem(20px);
+              margin-top: rem(5px);
               background: url("../img/smile.png") no-repeat center 50%;
               background-size: cover;
             }
@@ -127,13 +128,24 @@ html{
               height: rem(50px);
               line-height: rem(40px);
               font-size: rem(20px);
+              position:relative ;
               i,ul{
                 float: left;
                 font-style: normal;
 
               }
+              .cc-chat-users{
+                position: absolute;
+                bottom:rem(50px);
+                left: rem(20px);
+                border-bottom: none;
+                .cc-chat-users-item{
+                  border-bottom: 1px dashed #ccc;
+                }
+              }
               .cc-chat-people,.cc-chat-users{
-                height: rem(38px);
+                min-height: rem(38px);
+                height: auto;
                 width: 160px;
                 border:1px solid #ddd;
                 background: #fff;
@@ -141,6 +153,35 @@ html{
                 float: left;
                 text-align: center;
               }
+            }
+          }
+          .cc-chat-input{
+            width: 90%;
+            @include middle();
+            height: 80px;
+            background: #fff;
+            border-radius: rem(5px);
+          }
+          .cc-chat-submit{
+            height: rem(30px);
+            width: 90%;
+            margin: rem(10px) auto;
+            button{
+              color: #fff;
+              background-color: #286090;
+              border-color: #204d74;
+              display: inline-block;
+              padding: 6px 12px;
+              margin-bottom: 0;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 1.42857143;
+              text-align: center;
+              white-space: nowrap;
+              vertical-align: middle;
+              float: right;
+              border: 1px solid transparent;
+              border-radius: 4px;
             }
           }
         }

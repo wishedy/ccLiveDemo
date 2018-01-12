@@ -39,18 +39,18 @@ html {
           background: #316661; }
         .cc-container .cc-banner .cc-banner-container .cc-video-container .cc-panel {
           width: auto;
-          height: 17.5rem;
-          padding: 1.25rem;
+          height: 19.375rem;
+          padding-top: 0.625rem;
           background: #27c3bb; }
           .cc-container .cc-banner .cc-banner-container .cc-video-container .cc-panel .cc-doc-box {
             float: left;
             height: 100%;
-            width: 33.75rem;
+            width: 31.25rem;
             background: #2D323C; }
           .cc-container .cc-banner .cc-banner-container .cc-video-container .cc-panel .cc-video-control {
             float: left;
             height: 100%;
-            width: 16.875rem;
+            width: 21.875rem;
             margin-left: 0.625rem;
             background: #2D323C; }
       .cc-container .cc-banner .cc-banner-container .cc-chat-container {
@@ -84,7 +84,7 @@ html {
               text-align: right;
               padding-bottom: 0.3125rem; }
         .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel {
-          background: #EFF3FE;
+          background: #ecf0fb;
           width: 100%;
           height: 180px; }
           .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar {
@@ -95,6 +95,7 @@ html {
               width: 2.375rem;
               height: 2.375rem;
               margin-left: 1.25rem;
+              margin-top: 0.3125rem;
               background: url("../img/smile.png") no-repeat center 50%;
               background-size: cover; }
             .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar .cc-chat-opponent {
@@ -103,17 +104,52 @@ html {
               margin-left: 1.25rem;
               height: 3.125rem;
               line-height: 2.5rem;
-              font-size: 1.25rem; }
+              font-size: 1.25rem;
+              position: relative; }
               .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar .cc-chat-opponent i, .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar .cc-chat-opponent ul {
                 float: left;
                 font-style: normal; }
+              .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar .cc-chat-opponent .cc-chat-users {
+                position: absolute;
+                bottom: 3.125rem;
+                left: 1.25rem;
+                border-bottom: none; }
+                .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar .cc-chat-opponent .cc-chat-users .cc-chat-users-item {
+                  border-bottom: 1px dashed #ccc; }
               .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar .cc-chat-opponent .cc-chat-people, .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-bar .cc-chat-opponent .cc-chat-users {
-                height: 2.375rem;
+                min-height: 2.375rem;
+                height: auto;
                 width: 160px;
                 border: 1px solid #ddd;
                 background: #fff;
                 margin: 0 0.3125rem;
                 float: left;
                 text-align: center; }
+          .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-input {
+            width: 90%;
+            margin: 0 auto;
+            height: 80px;
+            background: #fff;
+            border-radius: 0.3125rem; }
+          .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-submit {
+            height: 1.875rem;
+            width: 90%;
+            margin: 0.625rem auto; }
+            .cc-container .cc-banner .cc-banner-container .cc-chat-container .cc-chat-panel .cc-chat-submit button {
+              color: #fff;
+              background-color: #286090;
+              border-color: #204d74;
+              display: inline-block;
+              padding: 6px 12px;
+              margin-bottom: 0;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 1.42857143;
+              text-align: center;
+              white-space: nowrap;
+              vertical-align: middle;
+              float: right;
+              border: 1px solid transparent;
+              border-radius: 4px; }
 
 /*# sourceMappingURL=ccLiveDemo.css.map */
