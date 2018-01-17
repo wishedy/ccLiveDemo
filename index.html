@@ -10,21 +10,68 @@
 <section class="cc-container">
     <section class="cc-header">
         <header class="cc-header-container">
-            <h1 class="title">CC直播web端demo展示</h1>
+            <h1 class="title">CC直播web端demo展示：</h1>
+            <span class="cc-live-name"></span>
         </header>
     </section>
     <section class="cc-banner">
         <section class="cc-banner-container">
 
             <section class="cc-video-container">
-                <section class="cc-video-box"></section>
+                <section class="cc-video-box">
+                    <!--视频元素-start-->
+                    <div id="livePlayer"></div>
+                    <!--视频元素-end-->
+                </section>
                 <section class="cc-panel">
-                    <section class="cc-doc-box"></section>
-                    <section class="cc-video-control"></section>
+                    <section class=" cc-video-control">
+                        <section class="cc-control-bar">
+                            <button class="control-btn">在线人数<i class="cc-online-num"></i></button>
+                            <button class="control-btn cc-bullet" title="开关视频/文档弹幕仅PC支持">弹幕</button>
+                            <button class="control-btn cc-strip" title="显示或隐藏视频控制条">显示控制条</button>
+                            <button class="control-btn cc-doc" title="文档自适应仅支持PC端">自适应窗口</button>
+                            <button class="control-btn cc-microphone" title="和讲师语音互动">连麦</button>
+                        </section>
+                        <section class="cc-control-bar">
+                            <button class="control-btn control-exit">退出直播</button>
+                        </section>
+                        <section class="cc-control-bar">
+                            <button class="control-btn send-question-btn">发送问题</button>
+                            <input type="text" class="control-input control-input-question" placeholder="请输入你的提问"/>
+                        </section>
+                        <section class="cc-control-bar">
+                            <button class="control-btn control-btn-screen">发送弹幕</button>
+                            <input type="text" class="control-input screen-input" placeholder="请输入弹幕"/>
+                        </section>
+                        <section class="cc-control-bar">
+                            <input type="range" class="control-input volume-control-input" placeholder="音量调节" title="音量调节" step="0.01"  min="0" max="1"/>
+                        </section>
+                    </section>
+                    <section class="cc-doc-box">
+                        <!--文档元素-start-->
+                        <div id="drawPanel"></div>
+                        <!--文档元素-end-->
+                    </section>
                 </section>
             </section>
             <section class="cc-chat-container">
+                <section class="cc-chat-interact" title="显示互动视频的元素">
+                    <div class="call-box call-box-small" id="videoInteraction">
+                        <div class="call-tit">视频通话申请中...</div>
+                        <!--<div class="btn-toggle"></div>-->
+                        <video id="interactionLocalVideo" style="height: 100%; width: 100%;" autoplay></video>
+                    </div>
+                </section>
                 <ul class="cc-msg-list">
+                    <!--<li class="cc-msg-item">
+                        <div class="cc-chat-user">
+                            <span>孔子</span>说:
+                        </div>
+                        <div class="cc-chat-word">
+                            有朋自远方来不亦乐乎，人不知而不愠不亦君子乎
+                        </div>
+                        <div class="cc-chat-time">15:58:25</div>
+                    </li>
                     <li class="cc-msg-item">
                         <div class="cc-chat-user">
                             <span>孔子</span>说:
@@ -33,31 +80,84 @@
                             有朋自远方来不亦乐乎，人不知而不愠不亦君子乎
                         </div>
                     </li>
+                    <li class="cc-msg-item">
+                        <div class="cc-chat-user">
+                            <span>孔子</span>说:
+                        </div>
+                        <div class="cc-chat-word">
+                            有朋自远方来不亦乐乎，人不知而不愠不亦君子乎
+                        </div>
+                    </li>
+                    <li class="cc-msg-item me">
+                        <div class="cc-chat-user">
+                            <span>孔子</span>说:
+                        </div>
+                        <div class="cc-chat-word">
+                            有朋自远方来不亦乐乎，人不知而不愠不亦君子乎
+                        </div>
+                    </li>
+                    <li class="cc-msg-item">
+                        <div class="cc-chat-user">
+                            <span>孔子</span>说:
+                        </div>
+                        <div class="cc-chat-word">
+                            有朋自远方来不亦乐乎，人不知而不愠不亦君子乎
+                        </div>
+                    </li>-->
                 </ul>
                 <section class="cc-chat-panel">
                     <section class="cc-chat-bar">
-                        <span class="cc-chat-emotion"></span>
+                        <span class="cc-chat-emotion">
+                        <script id="al-tpl-emotion" type="text/x-handlebars-template">
+                        {{#each emotionList}}
+                            <li class="cc-chat-emotionItem">
+                                <figure class="cc-chat-face">
+                                    <img src="img/emotion/qqexpression/{{this}}.gif" alt="">
+                                </figure>
+                            </li>
+                        {{/each}}
+                        </script>
+                            <ul class="cc-chat-emotionList hide">
+                            </ul>
+                        </span>
                         <span class="cc-chat-opponent">
                             <i>对</i>
-                            <section class="cc-chat-people">孟子</section>
-                            <ul class="cc-chat-users">
-                                <li class="cc-chat-users-item">1111111</li>
-                                <li class="cc-chat-users-item">1111111</li>
-                                <li class="cc-chat-users-item">1111111</li>
-                                <li class="cc-chat-users-item">1111111</li>
-                                <li class="cc-chat-users-item">1111111</li>
+                            <section class="cc-chat-people" data-to="0">所有人</section>
+                            <script id="al-tpl-teacher" type="text/x-handlebars-template">
+                            {{#each teachers}}
+                                <li class="cc-chat-users-item" data-teacherId="{{id}}" data-role="{{role}}">{{name}}</li>
+                            {{/each}}
+                            </script>
+                            <ul class="cc-chat-users hide">
+
                             </ul>
                             <i>说</i>
                         </span>
                     </section>
-                    <section class="cc-chat-input"></section>
+                    <section class="cc-chat-input" contenteditable="true"></section>
                     <section class="cc-chat-submit">
-                        <button>发送</button>
+                        <button id="cc-send-msg">发送</button>
                     </section>
                 </section>
             </section>
         </section>
     </section>
 </section>
+<section class="cc-mask hide">
+    <section class="cc-modal">
+        <h1 class="cc-modal-title">这是一个标题</h1>
+        <div class="cc-modal-content">
+
+        </div>
+        <div class="cc-modal-control-bar">
+            <button class="control-modal-btn">取消</button>
+            <button class="control-modal-btn">确认</button>
+        </div>
+    </section>
+</section>
+<script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.js"></script>
+<script src="//view.csslcloud.net/js/liveSDK.js" type="text/javascript"></script>
+<script src="https://cdn.bootcss.com/handlebars.js/4.0.10/handlebars.min.js"></script>
+<script src="js/cclive_demo.js" type="text/javascript"></script>
 </body>
 </html>

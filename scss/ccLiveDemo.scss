@@ -1,64 +1,117 @@
 @import "pxToRem";
-@mixin middle{
+
+@mixin middle {
   margin: 0 auto;
 }
-@mixin fullWidth{
+
+@mixin fullWidth {
   width: 100%;
   height: auto;
 }
-html{
+
+html {
   height: auto;
   min-height: 100%;
   width: 100%;
   background: #F0F0F0;
 }
-.cc-container{
+
+.cc-container {
   width: 100%;
   height: 100%;
-  .cc-header{
+  position: relative;
+  .cc-header {
     @include fullWidth();
     margin-bottom: rem(20px);
     background: #2D323C;
-    .cc-header-container{
-        @include middle();
-        height: rem(100px);
-      .title{
+    .cc-header-container {
+      @include middle();
+      height: rem(100px);
+      .title,.cc-live-name {
         line-height: rem(100px);
-        color:#fff;
+        color: #fff;
         font-size: rem(38px);
         padding: 0 rem(30px);
+        float: left;
       }
+      /*.cc-live-name{
+        float: left;
+      }*/
+
     }
   }
-  .cc-banner{
+  .cc-banner {
     @include fullWidth();
-    .cc-banner-container{
+    .cc-banner-container {
       @include middle();
       width: rem(1280px);
       height: rem(760px);
-      padding:rem(30px);
+      padding: rem(30px);
       background: #3dadff;
-      .cc-video-container{
+      .cc-video-container {
         float: left;
         width: rem(860px);
         height: rem(540px);
-        .cc-video-box{
+        .cc-video-box {
           width: 100%;
           height: rem(440px);
           background: #316661;
         }
-        .cc-panel{
+        .cc-panel {
           width: auto;
           height: rem(310px);
           padding-top: rem(10px);
           background: #27c3bb;
-          .cc-doc-box{
+          .cc-video-control {
             float: left;
-            height: 100%;
-            width: rem(500px);
+            height: rem(270px);
+            width: rem(460px);
+            padding: rem(20px);
             background: #2D323C;
+            .control-btn{
+              color: #fff;
+              background-color: #2590EB;
+              border-color: #2263ae;
+              display: inline-block;
+              padding: 6px 12px;
+              margin: 3px;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 1.42857143;
+              text-align: center;
+              white-space: nowrap;
+              vertical-align: middle;
+              float: left;
+              border: 1px solid transparent;
+              border-radius: 4px;
+              .cc-online-num{
+                color: #f0ffe8;
+                font-style:normal;
+              }
+            }
+            .control-input{
+              width: rem(300px);
+              padding: 6px 12px;
+              border:1px solid #ccc;
+              background: #fff;
+              margin-left: rem(5px);
+              font-size: rem(20px);
+              font-weight: 400;
+            }
+            .cc-bullet-active,.cc-strip-active,.cc-microphone-ative,.cc-doc-active{
+              background-color:#ce4844;
+              background-color: #a1433f;
+            }
+            .cc-control-bar{
+              height: rem(40px);
+              width: 100%;
+              padding: 6px 12px;
+              margin: 3px;
+
+
+            }
           }
-          .cc-video-control{
+          .cc-doc-box {
             float: left;
             height: 100%;
             width: rem(350px);
@@ -67,52 +120,88 @@ html{
           }
         }
       }
-      .cc-chat-container{
+      .cc-chat-container {
         float: left;
         width: rem(380px);
         height: rem(740px);
         padding: rem(10px);
         margin-left: rem(15px);
         background: #362a9f;
-        .cc-msg-list{
+        .cc-chat-interact{
+          width: rem(380px);
+          height: rem(260px);
+          background: #ff9c59;
+          border-bottom: 2px solid #ddd;
+          .call-box{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            video{
+              position: absolute;
+
+            }
+            .call-tit{
+              position: absolute;
+              top:50%;
+              width: 100%;
+              font-size: rem(24px);
+              font-weight: 700;
+              color:#fff;
+              text-align: center;
+            }
+          }
+        }
+        .cc-msg-list {
           width: 100%;
-          height: 560px;
+          height: 300px;
           background: #F4F7FF;
-          .cc-msg-item{
+          overflow-x: hidden;
+          overflow-y:scroll;
+          .cc-msg-item {
             min-height: rem(45px);
             height: auto;
-            width: rem(340px);
+            width: rem(300px);
             padding: rem(20px);
-
+            float: left;
             line-height: rem(25px);
             font-size: rem(18px);
-            .cc-chat-user{
+            .cc-chat-user {
               height: rem(20px);
               width: 100%;
-              background: #abf0d9;
+              background: #dde1f5;
               font-weight: 800;
               font-size: rem(20px);
             }
-            .cc-chat-word{
+            .cc-chat-word {
               padding-left: rem(60px);
-              background: #abf0d9;
+              background: #dde1f5;
             }
-            &.me{
-              .cc-chat-user{
+            .cc-chat-time{
+              font-size: rem(10px);
+              color: #818181;
+            }
+            &.me {
+              float: right;
+              .cc-chat-user {
                 text-align: right;
                 padding-bottom: rem(5px);
+              }
+              .cc-chat-word{
+                text-align: right;
               }
             }
           }
         }
-        .cc-chat-panel{
-          background: #ecf0fb;
+        .cc-chat-panel {
+          background: #dfe3ee;
+          border-top: 2px solid #ddd;
           width: 100%;
           height: 180px;
-          .cc-chat-bar{
+          -moz-box-shadow:0px -4px 2px #333333; -webkit-box-shadow:0px -4px 2px #333333; box-shadow:0px -4px 2px #333333;
+          .cc-chat-bar {
             width: 100%;
             height: rem(50px);
-            .cc-chat-emotion{
+            .cc-chat-emotion {
               float: left;
               width: rem(38px);
               height: rem(38px);
@@ -120,34 +209,65 @@ html{
               margin-top: rem(5px);
               background: url("../img/smile.png") no-repeat center 50%;
               background-size: cover;
+              position: relative;
+              .cc-chat-emotionList{
+                position: absolute;
+                bottom:rem(45px);
+                left: 0;
+                width: rem(198px);
+                height: rem(150px);
+                padding: rem(10px);
+                background: #f0fbf4;
+                border: 2px solid #ddd;
+                overflow-x: hidden;
+                overflow-y:auto;
+                .cc-chat-emotionItem{
+                  float: left;
+                  width: rem(24px);
+                  height: rem(24px);
+                  margin: rem(2px);
+                  box-sizing: border-box;
+                  .cc-chat-face{
+                    width: 100%;
+                    height: 100%;
+                    img{
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                  &:hover{
+                    border: 1px solid #ccc;
+                  }
+                }
+              }
             }
-            .cc-chat-opponent{
+            .cc-chat-opponent {
               width: 260px;
               float: right;
               margin-left: rem(20px);
               height: rem(50px);
               line-height: rem(40px);
               font-size: rem(20px);
-              position:relative ;
-              i,ul{
+              position: relative;
+              i, ul {
                 float: left;
                 font-style: normal;
 
               }
-              .cc-chat-users{
+              .cc-chat-users {
                 position: absolute;
-                bottom:rem(50px);
+                bottom: rem(50px);
                 left: rem(20px);
                 border-bottom: none;
-                .cc-chat-users-item{
+                .cc-chat-users-item {
                   border-bottom: 1px dashed #ccc;
                 }
               }
-              .cc-chat-people,.cc-chat-users{
+              .cc-chat-people, .cc-chat-users {
                 min-height: rem(38px);
                 height: auto;
                 width: 160px;
-                border:1px solid #ddd;
+                border: 1px solid #ddd;
                 background: #fff;
                 margin: 0 rem(5px);
                 float: left;
@@ -155,21 +275,22 @@ html{
               }
             }
           }
-          .cc-chat-input{
+          .cc-chat-input {
             width: 90%;
             @include middle();
-            height: 80px;
+            height: 60px;
             background: #fff;
             border-radius: rem(5px);
+            padding: rem(10px);
           }
-          .cc-chat-submit{
+          .cc-chat-submit {
             height: rem(30px);
             width: 90%;
             margin: rem(10px) auto;
-            button{
+            button {
               color: #fff;
-              background-color: #286090;
-              border-color: #204d74;
+              background-color: #2590EB;
+              border-color: #2263ae;
               display: inline-block;
               padding: 6px 12px;
               margin-bottom: 0;
@@ -188,4 +309,128 @@ html{
       }
     }
   }
+}
+.cc-sign-title{
+  font-size: rem(30px);
+  font-weight: 600;
+  line-height: rem(40px);
+  .cc-time{
+    font-style: normal;
+  }
+}
+.cc-sign-btn{
+  width: rem(80px);
+  height: rem(80px);
+  text-align: center;
+  line-height: rem(80px);
+  font-size: rem(30px);
+  font-weight: 600;
+  border-radius: 50%;
+  background: #3dadff;
+  margin-left: rem(110px);
+  margin-top: rem(10px);
+  &-active{
+    background: #ff0d30;
+  }
+  &-end{
+    background: gray;
+  }
+}
+.cc-mask{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  position: absolute;
+  z-index: 1;
+  top:0;
+  .cc-modal{
+    width: rem(480px);
+    height: rem(280px);
+    padding: rem(20px);
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: rem(-260px);
+    margin-top: rem(-160px);
+    border-radius: rem(10px);
+    .cc-modal-title{
+      height: rem(24px);
+      line-height: rem(24px);
+      font-size: rem(24px);
+      font-weight: 600;
+    }
+    .cc-modal-content{
+      margin: rem(20px) auto;
+      width: rem(300px);
+      height: rem(140px);
+      line-height: rem(26px);
+      font-size: rem(20px);
+    }
+    .cc-modal-control-bar{
+      width: 100%;
+      height:rem(60px);
+      margin: 0 auto;
+      .control-modal-btn{
+        color: #fff;
+        background-color: #2590EB;
+        border-color: #2263ae;
+        display: inline-block;
+        padding: 10px 32px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        float: right;
+        border: 1px solid transparent;
+        border-radius: 4px;
+
+        &:nth-child(1){
+          float:left;
+          margin-left: rem(50px);
+        }
+        &:nth-child(2){
+          float:right;
+          margin-right: rem(50px);
+        }
+      }
+    }
+    .cc-modal-alert{
+      button{
+
+        &:nth-child(1){
+          width: rem(200px);
+          margin-left:rem(140px) !important;
+        }
+        &:nth-child(2),&:nth-child(3),&:nth-child(4){
+          display: none;
+        }
+
+
+      }
+    }
+  }
+}
+::-webkit-scrollbar
+{
+  width: 12px;
+  height: 12px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
 }
