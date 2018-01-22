@@ -1,6 +1,7 @@
 /*
 * create By ZhangHeng on 2018/1/12
 */
+
 $(document).ready(function () {
     var ccLive = {
         data: {
@@ -12,8 +13,8 @@ $(document).ready(function () {
             controlBar: true,//控制条显示隐藏
             docFit: true,//文档自适应开关
             liveInit: {
-                userid: '0438CD3A0AB20794',
-                roomid: '2F3CCEC4AE3428C39C33DC5901307461',
+                roomid: "C837DF69777B32DC9C33DC5901307461",
+                userid: "0438CD3A0AB20794",
                 viewername: '萤火虫_227342010941_13_809302',
                 viewertoken: 'nothing',
                 viewercustomua: 'web-pc',
@@ -216,7 +217,6 @@ $(document).ready(function () {
             var t = ccLive;
           var container = $(".cc-msg-list");
           var itemData = JSON.parse(data);
-          console.log(itemData);
           var userNameInfo = itemData.username.split("_");
           var cid = userNameInfo[1];
           var customerName = userNameInfo[0];

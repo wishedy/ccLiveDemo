@@ -888,7 +888,10 @@ $(function(){
 				$('#videoInteraction .call-tit').show().text('视频通话申请中...');
 			}
 			$('#interactionMsg').show().text('通话申请中...');
-
+			console.log({
+                video: isVideo,
+                audio: isAudio
+            })
 			DWLive.requestInteraction({
 				video: isVideo,
 				audio: isAudio
@@ -920,6 +923,7 @@ $(function(){
 			}, 1500);
 		}
 		e.preventDefault();
+		debugger;
 	});
 
 

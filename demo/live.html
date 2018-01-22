@@ -79,7 +79,7 @@
                 <li title="视频互动" name="interaction" t="video" style="display: none;">
                     <a href="javascript:void(0);" class="video" data-title="视频互动"></a>
                 </li>
-                <li title="语音互动" name="interaction" t="audio" style="display: none;">
+                <li title="语音互动" name="interaction" t="audio" style="display: block;">
                     <a href="javascript:void(0);" class="audio" data-title="语音互动"></a>
                 </li>
                 <span id="interactionMsg" style="padding-top: 5px; display: inline-block;"></span>
@@ -228,7 +228,8 @@
 <script src="js/handlebars.js"></script>
 <script src="js/base.js"></script>
 <script src="js/common.js"></script>
-<script src="//view.csslcloud.net/js/liveSDK.js"></script>
+<!--<script src="//view.csslcloud.net/js/liveSDK.js"></script>-->
+<script src="js/liveSDK.js"></script>
 <script src="js/ui.js"></script>
 <script src="js/live.js"></script>
 <script src="js/cc.questionnaire.js"></script>
@@ -238,7 +239,7 @@
     // 直播SDK参数配置
     DWLive.init({
         userid: '0438CD3A0AB20794',
-        roomid: '2F3CCEC4AE3428C39C33DC5901307461',
+        roomid: 'C837DF69777B32DC9C33DC5901307461',
         viewername: '萤火虫_227342010941_13_809302',
         viewertoken: 'nothing',
         viewercustomua: 'web-pc',
